@@ -9,7 +9,7 @@ perna_02 = document.getElementById('leg02')
 palavras_possiveis = [
     {
         palavra: 'COMPUTADOR',
-        dica: 'bjeto'
+        dica: 'objeto'
     },
 
     {
@@ -53,8 +53,30 @@ palavras_possiveis = [
         palavra: 'STARBUCKS',
         dica: 'empresa'
     },
+    {
+        palavra: 'HEADSET',
+        dica: 'objeto'
+    },
+    {
+        palavra: 'MOCHILA',
+        dica: 'objeto'
+    },
+    {
+        palavra: 'MICROSOFT',
+        dica: 'empresa'
+    },
+    {
+        palavra: 'CELULAR',
+        dica: 'objeto'
+    },
+    {
+        palavra: 'ELEFANTE',
+        dica: 'animal'
+    },
 ]
+console.log(palavras_possiveis.length-1)
 function perdeu(){
+
     alert(`Você é ruim!
     PERDEU!`)
     location.reload()
@@ -90,7 +112,7 @@ function desenha_boneco(qnt_erros){
 }
 
 //Gera palavra
-let index = (Math.random() * 10).toFixed()
+let index = (Math.random() * palavras_possiveis.length - 1).toFixed()
 let palavra_sorteada = palavras_possiveis[index].palavra
 let dica_palavra_sorteada = palavras_possiveis[index].dica
 let letras_usadas = []
