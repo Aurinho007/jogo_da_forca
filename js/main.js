@@ -135,6 +135,17 @@ setDica(dica_palavra_sorteada)
 setPalavra()
 
 document.getElementById('verifica').addEventListener('click', () => {
+       preGame()
+})
+
+document.addEventListener('keydown', (event) => {
+    const keyName = event.key;
+    if(keyName == 'Enter'){
+        preGame()
+    }
+  });
+
+  function preGame(){
     let input = document.getElementById('input')
     let chute = input.value
     chute = chute.normalize("NFD").replace(/[^a-zA-Zs]/g, "").toUpperCase()
@@ -157,8 +168,10 @@ document.getElementById('verifica').addEventListener('click', () => {
         game(chute, vetor_palavra_sorteada)
         setLetrasUsadas(chute)
     } 
-    input.value = ''   
-})
+    input.value = ''
+  }
+
+
 
 function setLetrasUsadas(chute){
     letras_usadas.push(chute)
