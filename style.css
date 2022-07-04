@@ -1,6 +1,6 @@
 @font-face{
     font-family: "phi";
-    src: url("/font/Ubuntu-Medium.ttf")
+    src: url("./font/Ubuntu-Medium.ttf")
 }
 
 body {
