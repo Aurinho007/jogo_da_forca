@@ -74,13 +74,23 @@ palavras_possiveis = [
         dica: 'animal'
     },
 ]
+
+function restartGame(){
+    let reser_game = confirm('Deseja jogar de novo?') 
+    if(reser_game){
+        location.reload() 
+     } else {
+        location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+     }
+}
+
 function perdeu(){
     alert(`Você é ruim!\nPERDEU!\nA palavra era: ${palavra_sorteada}`)
-    location.reload()
+    restartGame()
 }
 function ganhou(){
     alert(`PARABÉNS!\nVocê Venceu\nA palavra era: ${palavra_sorteada}`)
-    location.reload()
+    restartGame()
 }
 function desenha_boneco(qnt_erros){
     switch (qnt_erros){
@@ -127,12 +137,12 @@ setPalavra()
 document.getElementById('verifica').addEventListener('click', () => {
     let input = document.getElementById('input')
     let chute = input.value
-    chute = chute.toUpperCase()
+    chute = chute.normalize("NFD").replace(/[^a-zA-Zs]/g, "").toUpperCase()
 
     if(chute == palavra_sorteada){
         ganhou()
     }
-    else if(!isNaN(chute) || chute.length < 1 || chute.length > 1){
+    else if(chute.length < 1 || chute.length > 1 || chute.search(/[a-z]/gi)){
         alert('Digite uma letra!')
     }
     else if(letras_usadas.includes(chute)) {
