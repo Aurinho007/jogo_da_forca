@@ -118,6 +118,7 @@ function desenha_boneco(qnt_erros){
 
 //Gera palavra
 let index = (Math.random() * palavras_possiveis.length).toFixed()
+if(index > 15 || index < 0) index = 5
 let palavra_sorteada = palavras_possiveis[index].palavra
 let dica_palavra_sorteada = palavras_possiveis[index].dica
 let letras_usadas = []
