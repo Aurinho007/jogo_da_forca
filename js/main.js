@@ -145,7 +145,7 @@ document.addEventListener('keydown', (event) => {
         preGame()
     }
   });
-
+input.focus()
   function preGame(){
     let input = document.getElementById('input')
     let chute = input.value
