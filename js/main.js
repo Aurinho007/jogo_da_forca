@@ -170,6 +170,7 @@ document.addEventListener('keydown', (event) => {
         setLetrasUsadas(chute)
     } 
     input.value = ''
+    input.focus()
   }
 
 
