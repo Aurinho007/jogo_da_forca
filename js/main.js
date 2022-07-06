@@ -117,8 +117,8 @@ function desenha_boneco(qnt_erros){
 }
 
 //Gera palavra
-let index = (Math.random() * palavras_possiveis.length-1).toFixed()
-if(index < 0) index++ //Gambiarra para arrumar um bug
+let index = (Math.random() * (palavras_possiveis.length-1)).toFixed()
+
 let palavra_sorteada = palavras_possiveis[index].palavra
 let dica_palavra_sorteada = palavras_possiveis[index].dica
 let letras_usadas = []
