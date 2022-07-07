@@ -46,6 +46,17 @@ body {
     width: 10px;
     height: 30px;
 }
+#base-forca{
+    display: flex;
+    flex-direction: column;
+}
+#base{
+    position: absolute;
+    width: 90px;
+    height: 10px;
+    margin-top: 250px;
+    margin-left: -40px;
+}
 
 .prego{
     width: 7px;
@@ -54,6 +65,9 @@ body {
     background-color: #808080;
     margin-top: 2px;
     margin-left: 1px;
+}
+#prego2{
+    margin-top: 230px;
 }
 
 #pessoa {
