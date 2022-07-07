@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
+:root{
+    --bckg:  #082032;
+    --title: #f2ae30;
+    --btn: #ff4c29;
+    --body: #d2d2d2;
+    --face: #000; 
+}
+
 body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #2f296a;
+    background-color: var(--bckg);
 }
 
 #forca {
@@ -59,7 +67,7 @@ body {
 }
 
 .body {
-    background-color: #000;
+    background-color: var(--body);
     visibility: hidden;
 }
 
@@ -67,12 +75,40 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+#eyes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 8px;
+}
+.eye{
+    width: 4px;
+    height: 4px;
+    background-color: var(--face);
+    border-radius: 50px;
+    margin: 5px;  
+}
+
+#boca{
+    height: 1px;
+    width: 15px;
+    background-color: var(--face);
+    margin-top: 1px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    
+
+}
+
 
 #superiores {
     display: flex;
     justify-content: center;
+    
     
 }
 
@@ -80,6 +116,7 @@ body {
     width: 7px;
     height: 65px;
     position: absolute;
+    
 }
 
 #arm01 {
@@ -88,6 +125,7 @@ body {
     position: absolute;
     transform: rotate(330deg);
     margin-left: 25px;
+    border-radius: 20px;
 }
 
 #arm02 {
@@ -96,6 +134,7 @@ body {
     position: absolute;
     transform: rotate(30deg);
     margin-left: -25px;
+    border-radius: 20px;
 }
 
 #inferiores {
@@ -109,6 +148,7 @@ body {
     height: 45px;
     transform: rotate(20deg);
     margin-left: -15px;
+    border-radius: 20px;
 }
 
 #leg02 {
@@ -117,19 +157,20 @@ body {
     position: absolute;
     transform: rotate(340deg);
     margin-left: 15px;
+    border-radius: 20px;
 }
 
 .texto{
     font-family: 'Ubuntu', sans-serif;;
-    color: #169eda
+    color: var(--title)
 }
 
 #verifica{
     width: 90px;
     height: 30px;
-    background-color: #2f296a;
-    color: #ed6931;
-    border: solid 2px #ed6931;
+    background-color: var(--bckg);
+    color: var(--btn);
+    border: solid 2px var(--btn);
     border-radius: 10px;
     font-size: 15px;
 }
@@ -145,7 +186,7 @@ body {
 #palavra{
     font-size: 35px;
     letter-spacing: 15px;
-    color: #ed6931
+    color: var(--btn)
 }
 
 #jogo-container{
